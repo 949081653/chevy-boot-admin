@@ -1,0 +1,22 @@
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:5193/eureka
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      user:
+        name: ${spring.security.user.name}
+        password: ${spring.security.user.password}
+spring:
+  application:
+    name: chevy-boot-admin
+  security:
+    user:
+      name: admin
+      password: admin
+server:
+  port: 8769
+
+
